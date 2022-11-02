@@ -1,0 +1,15 @@
+This is my first code on how i finally reversed a list and stored in a new variable
+Code -
+
+#Random list 'a' is created 
+a = [1,23,312,12,312,12,123,231212]
+
+print(f'the simplest way to reverse a string is printing using indexing like: {a[::-1]}\nbut i have written the code for creating a new variable and storing the list in that new variable')
+b = [] #created another list to store reversed list
+i = 1 #assigning for looping process
+for num in a:
+    for elements in range(0,len(a)):
+        b.append(a[-i])                             #appending the value in the list on particular indixes
+        i += 1                                      #increment for the variable to get to the next value
+        print(f"list have become changed as {b}")   #printing the newly created list 
+        break                                       #breaking the loops 
