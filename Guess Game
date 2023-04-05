@@ -1,0 +1,35 @@
+#creating a Guess the position game.
+
+#creating a list provide option to user 
+mylist = [' ', 'O']
+
+def shuffle_list(mylist):
+    shuffle(mylist)
+    return mylist
+    
+def player_guess():
+    guess = ' '
+    
+    while guess not in['0','1','2']:
+        guess = input("Guess a number between : 0 or 1  - ")
+    return int(guess)
+    
+ def check_guess(mylist,guess):
+        if mylist[guess] == 'O':
+            print("correct")
+            print(mylist)
+        else:
+            print("Incorrect")
+            print(mylist)
+            
+#initial list
+mylist = [' ', 'O']
+
+#shuffle list
+mixeduplist = shuffle_list(mylist)
+
+#user guess
+guess = player_guess()
+
+#check guess
+check_guess(mixeduplist,guess)
